@@ -79,7 +79,7 @@ class Explotion {
         this.frame = 0;
         this.sound = new Audio()
         this.sound.src = 'sounds/Magic SFX Preview Pack/Ice attack 2.wav';
-        this.audio.volume = 0.4;
+        this.sound.volume = 0.2;
         this.timeSinceLastFrame = 0;
         this.frameInterval = 100;
         this.markedForDeletion = false;
