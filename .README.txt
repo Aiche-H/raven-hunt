@@ -1,0 +1,4 @@
+-Open game double click "index"
+-Click ravens with mouse cursor to kill.
+-If even 1 raven gets to left edge game over.
+-reload page to restart = F5 key.
