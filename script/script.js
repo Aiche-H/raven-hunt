@@ -10,6 +10,7 @@ collisionCanvas.height = window.innerHeight;
 let score = 0;
 let gameOver = false;
 ctx.font = '50px impact';
+let refreshBtn = document.getElementById('refreshbtn');
 
 let timeToNextRaven = 0;
 let ravenInterval = 500;
@@ -135,11 +136,16 @@ function drawScore(){
 function drawGameOver(){
     ctx.textAlign = 'center';
     ctx.fillStyle = 'black';
-    ctx.fillText('F5 to restart, your score is ' + score, canvas.width/2, canvas.height/2);
+    ctx.fillText('Nice try! your score is ' + score, canvas.width/2, canvas.height/2);
     ctx.textAlign = 'center';
     ctx.fillStyle = 'white';
-    ctx.fillText('F5 to restart, your score is ' + score, canvas.width/2 + 4, canvas.height/2 + 3);
+    ctx.fillText('Nice try! your score is ' + score, canvas.width/2 + 4, canvas.height/2 + 3);
+    refreshBtn.style.display = 'block';
 };
+
+document.getElementById("refreshbtn").addEventListener('click', function() {
+    window.location.reload();
+  });
 
 window.addEventListener('click', function(e){
     const detectPixelColor = collisionCtx.getImageData(e.x, e.y, 1, 1)
